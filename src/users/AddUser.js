@@ -19,7 +19,8 @@ export default function AddUser() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8081/user/add", user);
+    // await axios.post("http://localhost:8081/user/add", user);
+    await axios.post("https://crudbackend-05ap.onrender.com/user/add", user);
     navigate("/");
   };
 

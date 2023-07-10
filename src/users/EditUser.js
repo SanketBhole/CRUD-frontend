@@ -25,12 +25,14 @@ export default function EditUser() {
 // eslint-disable-next-line
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:8081/user/updateUser/${id}`, user);
+    // await axios.put(`http://localhost:8081/user/updateUser/${id}`, user);
+    await axios.put(`https://crudbackend-05ap.onrender.com/user/updateUser/${id}`, user);
     navigate("/");
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8081/user/viewUser/${id}`);
+    // const result = await axios.get(`http://localhost:8081/user/viewUser/${id}`);
+    const result = await axios.get(`https://crudbackend-05ap.onrender.com/user/viewUser/${id}`);
     setUser(result.data);
   };
 
